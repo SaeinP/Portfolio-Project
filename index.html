@@ -9,10 +9,12 @@
 </head>
 <body>
     <div id="flexible">
-        <div id="cloud"></div>
-        <div id="cloud" class="move1"></div>
-        <div id="cloud" class="move2"></div>
-        <div id="cloud" class="move3"></div>
+        <div class="cloud"></div>
+        <div class="cloud" id="move1"></div>
+        <div class="cloud" id="move2"></div>
+        <div class="cloud" id="move3"></div>
+        <div class="cloud" id="move4"></div>
+        <div class="cloud" id="move5"></div>
     </div>
     
     <nav id="desktop-nav">
@@ -26,7 +28,48 @@
             </ul>
         </div>
     </nav>
-    
+
+    <nav id="hamburger-nav">
+        <div class="logo">Saein Pak</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="typewriter">
+        <p>Welcome to Saein Pak's ePortfolio!</p>
+    </div>
+    <br>
+    <section iod="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="John Doe Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello I'm Saein Pak</p>
+            <h1 class="title">Saein Pak</h1>
+            <p class="section__text__p2">Junior for Computer Science at University of Washington - Tacoma</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href('./#contact')">
+                    Download CV
+                </button>
+            </div>
+        </div>
+    </section>
+
 
     <script src="script.js"></script>
 </body>

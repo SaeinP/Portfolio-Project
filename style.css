@@ -12,10 +12,12 @@ head{
     justify-content: center;
     align-items: center;  
 }
-.move1 { transform: translate(0px, 300px); }
-.move2 { transform: translate(400px, 800px); }
-.move3 { transform: translate(600px, 280px); }
-#cloud {
+#move1 { transform: translate(0px, 300px); }
+#move2 { transform: translate(400px, 800px); }
+#move3 { transform: translate(600px, 280px); }
+#move4 { transform: translate(600px, 1580px); }
+#move5 { transform: translate(600px, 1280px); }
+.cloud {
 	width: 350px; height: 120px;
   background: #f2f9fe;
   
@@ -28,16 +30,17 @@ head{
   border-radius: 100px;
   position: relative;
   margin: 180px auto 100px;
+  z-index: -1;
 }
 
-#cloud:after, #cloud:before {
+.cloud:after, .cloud:before {
   content: "";
   position: absolute;
   background: #f2f9fe;
   z-index: -1;
 }
 
-#cloud:after {
+.cloud:after {
   width: 100px;
   height: 100px;
   top: -50px;
@@ -45,7 +48,7 @@ head{
   border-radius: 100px;
 }
 
-#cloud:before {
+.cloud:before {
   width: 180px;
   height: 180px;
   top: -90px;
@@ -76,7 +79,7 @@ body {
     background: #ACEAFF;
 }
 
-httml {
+html {
     scroll-behavior: smooth;
 }
 
@@ -92,7 +95,7 @@ a, .btn {
 
 nav, .nav-links{
     display: flex;
-
+    padding: 20px;
 }
 
 nav {
@@ -101,8 +104,13 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    background-color: white;
+    
 }
+#desktop-nav{
+    background-color: white;
+
+}
+
 .logo{
     font-size: 2rem;
 }
@@ -112,4 +120,134 @@ nav {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+}
+
+#typewriter{
+    position:static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10vh);
+    height: 90vh;
+    z-index: 999;
+}
+#typewriter p{
+    display: inline-block;
+    color: #000;
+    font-size: 2.5rem;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 2px;
+    
+    border-right: 1px solid;
+    animation: typing 3s steps(34) forwards, blinks 0.6s step-end infinite;
+    max-width: fit-content;
+    
+}
+
+@keyframes typing{ 
+    from{width: 0}
+    to{width: 34ch;}   
+}
+
+@keyframes blinks{
+    50%{
+        border-color: transparent;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.logo{
+    font-size: 2rem;
+    
+}
+
+.logo:hover{
+    cursor: default;
+
+}
+
+/* The Hamburg Menu*/
+#hamburger-nav{
+    display: none;
+    background-color: white;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    max-width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+
+}
+
+.menu-links.open{
+    max-height: 300px;
+
+}
+
+.hamburger-icon.open{
+    border-radius: 10px;
+    background-color: lightgray;
+}
+.hamburger-icon.open span{
+    
+    border-radius: 10px;
+    background-color: lightcoral;
+}
+
+.sections{
+
+
 }
