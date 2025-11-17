@@ -51,25 +51,34 @@
         <p>Welcome to Saein Pak's ePortfolio!</p>
     </div>
     <br>
-    <section iod="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.png" alt="John Doe Profile Picture">
+    <div id="containerforprof">
+        <div id="animatedScroll">
+            <section id="profile">
+                    <div class="section__pic-container">
+                        <img src="./assets/profile-pic.png" alt="John Doe Profile Picture">
+                    </div>
+                    <div class="section__text">
+                        <p class="section__text__p1">Hello, I'm</p>
+                        <h1 class="title">Saein Pak</h1>
+                        <p class="section__text__p2">Junior Majoring In Computer Science at University of Washington - Tacoma</p>
+                        <div class="btn-container">
+                            <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                                Download CV
+                            </button>
+                            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                                Contact Info
+                            </button>
+                        </div>
+                        <div id="socials-container">
+                            <img src="./assets/linkedin.png" alt="My LinkedIn Profile" onclick="window.open('https://www.linkedin.com/in/saein-pak-176170392/')">
+                        
+                            <img src="./assets/github.png" alt="My Github Profile" onclick="window.open('https://github.com/SaeinP')">
+                        </div>
+                    </div>
+            </section>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello I'm Saein Pak</p>
-            <h1 class="title">Saein Pak</h1>
-            <p class="section__text__p2">Junior for Computer Science at University of Washington - Tacoma</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href('./#contact')">
-                    Download CV
-                </button>
-            </div>
-        </div>
-    </section>
-
+    </div>
+    <div id="placeHolder"></div>
 
     <script src="script.js"></script>
 </body>

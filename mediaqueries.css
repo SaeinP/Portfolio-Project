@@ -5,4 +5,19 @@
     #hamburger-nav{
         display: flex;
     }
+    #profile{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .section__pic-container{
+        flex: 0 0 auto;
+    }
+
+    .section__text{
+        flex: 2 1 auto;
+    }
 }
+

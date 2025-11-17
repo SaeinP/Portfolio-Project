@@ -77,6 +77,8 @@ head{
 body {
     font-family: "Nunito", sans-serif;
     background: #ACEAFF;
+    overflow-x: hidden;
+    
 }
 
 html {
@@ -87,7 +89,7 @@ p {
     color: rgb(85, 85, 85)
 }
 
-/* Transition */
+
 
 a, .btn {
     transition: all 300ms ease;
@@ -134,9 +136,9 @@ nav {
 #typewriter p{
     display: inline-block;
     color: #000;
-    font-size: 2.5rem;
+     font-size: clamp(1rem, 5vw, 3.5rem);
     margin-inline: auto;
-    overflow: hidden;
+    overflow: hidden; 
     white-space: nowrap;
     padding-right: 2px;
     
@@ -245,9 +247,145 @@ a:hover{
     
     border-radius: 10px;
     background-color: lightcoral;
+    box-shadow: lightsalmon 0px 2px 0px
 }
 
 .sections{
 
 
 }
+#animatedScroll {
+    padding: 20px;
+    background-color: white;
+    border-radius: 50px;
+    width: 90%;
+    height: 60vh;
+    opacity: 1;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    box-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.3);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+
+    }
+    to{
+        opacity: 1;
+        scale:1;
+
+    }
+}
+#placeHolder {
+    width: 100vh;
+    aspect-ratio: 1/1;
+}
+
+#containerforprof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+/* Profile image responsive rules
+   - image uses clamp() so it scales with viewport but stays within bounds
+   - container centers the image; on wide screens the profile section becomes a two-column layout */
+.section__pic-container{
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    display: block;
+    width: fit-content;
+    
+}
+
+.section__pic-container img{
+    display: block;
+    width: clamp(2vw, 25vw, 35vw);
+    height: auto;
+    
+} 
+
+.btn-container button{
+    background-color: black;
+    color: white;
+    width: 10vh;
+    height: 5vh;
+    padding: 5px;
+    border-radius: 30px;
+    border: 3px solid lightgray;
+    font-size: 1vh;
+    margin-inline: auto;
+    margin: 0.3vh
+}
+
+.btn-container button:hover{
+    background-color: gray;
+    cursor: pointer;
+    box-shadow: 0.3vh 0.3vh 0.5vh rgba(0, 0, 0, 0.3);
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width:fit-content
+}
+#profile{
+    display: flex;
+    justify-content: flex-start;
+    
+    align-items: center;
+    gap:4vh;
+    padding:0;
+    flex-direction: row;
+    
+}
+ section img{
+    width: 5vh;
+    height: 5vh;
+    margin-inline: 0.5vh;
+    
+ }
+
+#socials-container{
+    display: inline-block;
+    
+    
+ }
+
+ .section__text p{
+    position: relative;
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+    overflow:hidden;
+ }
+
+#socials-container img{
+    width: 3.5vh;
+    height: 3.5vh;
+    margin-inline: 5px;
+    transition: transform 0.3s ease;
+    
+ } 
+
+ #socials-container img:hover{
+    filter: grayscale(100%);
+    cursor: pointer;
+    mix-blend-mode: luminosity;
+ }
+ .section__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline: auto;
+ }
