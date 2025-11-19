@@ -261,9 +261,10 @@ a:hover{
     width: 90%;
     height: 60vh;
     opacity: 1;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-name: appear, fadeOut;
+    animation-timing-function: linear, linear;
+    animation-timeline: view(), view();
+    animation-range: entry 0% cover 40%, cover 80% cover 110%;
     box-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.3);
    display: flex;
    justify-content: center;
@@ -283,6 +284,17 @@ a:hover{
 
     }
 }
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+        scale: 1;
+    }
+    to{
+        opacity: 0.3;
+        scale: 0.8;
+    }
+}
+
 #placeHolder {
     width: 100vh;
     aspect-ratio: 1/1;
