@@ -236,18 +236,20 @@ a:hover{
 
 .menu-links.open{
     max-height: 300px;
-
+    transition: max-height 0.3s;
 }
 
 .hamburger-icon.open{
     border-radius: 10px;
     background-color: lightgray;
+    transition: background-color 0.3s;
 }
 .hamburger-icon.open span{
     
     border-radius: 10px;
     background-color: lightcoral;
-    box-shadow: lightsalmon 0px 2px 0px
+    box-shadow: lightsalmon 0px 2px 0px;
+    transition: 0.3s linear;
 }
 
 .sections{
@@ -264,11 +266,11 @@ a:hover{
     animation-name: appear, fadeOut;
     animation-timing-function: linear, linear;
     animation-timeline: view(), view();
-    animation-range: entry 0% cover 40%, cover 80% cover 110%;
+    animation-range: entry 0% cover 45%, cover 80% cover 110%;
     box-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.3);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -291,7 +293,7 @@ a:hover{
     }
     to{
         opacity: 0.3;
-        scale: 0.8;
+        scale: 0.7;
     }
 }
 
@@ -305,7 +307,8 @@ a:hover{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    
+    flex-direction: column;
+    gap: 6vh;
 }
 
 /* Profile image responsive rules
@@ -313,7 +316,7 @@ a:hover{
    - container centers the image; on wide screens the profile section becomes a two-column layout */
 .section__pic-container{
     margin: 0;
-    margin-left: auto;
+    
     padding: 0;
     display: block;
     width: fit-content;
@@ -322,7 +325,7 @@ a:hover{
 
 .section__pic-container img{
     display: block;
-    width: clamp(2vw, 25vw, 35vw);
+    width: 25vw;
     height: auto;
     
 } 
@@ -330,12 +333,12 @@ a:hover{
 .btn-container button{
     background-color: black;
     color: white;
-    width: 10vh;
-    height: 5vh;
+    width: 12vh;
+    height: 6vh;
     padding: 5px;
     border-radius: 30px;
     border: 3px solid lightgray;
-    font-size: 1vh;
+    font-size: 1.4vh;
     margin-inline: auto;
     margin: 0.3vh
 }
@@ -353,19 +356,19 @@ a:hover{
     width:fit-content
 }
 #profile{
+    
     display: flex;
     justify-content: flex-start;
     
     align-items: center;
-    gap:4vh;
+    gap: 3vh;
     padding:0;
-    flex-direction: row;
+    
     
 }
  section img{
     width: 5vh;
     height: 5vh;
-    margin-inline: 0.5vh;
     
  }
 
@@ -377,14 +380,14 @@ a:hover{
 
  .section__text p{
     position: relative;
-    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+    font-size: 2.4vw;
     overflow:hidden;
  }
 
 #socials-container img{
     width: 3.5vh;
     height: 3.5vh;
-    margin-inline: 5px;
+    margin-inline: .1vh;
     transition: transform 0.3s ease;
     
  } 
@@ -400,4 +403,66 @@ a:hover{
     justify-content: center;
     flex-direction: column;
     margin-inline: auto;
+    text-align: center; /* center headings and paragraphs inside the profile text area */
  }
+
+ #about{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    
+ }
+
+ #containerAbout{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    
+    padding-right: 15vh;
+    width: 90%;
+    align-items: center;
+ }
+
+
+
+.aboutblock1{
+    width: 40vh;
+    height: fit-content;
+    display: inline-block;
+    
+    
+    
+    padding: 5vh;
+}
+.aboutblock2{
+    width: 100vh;
+    height: fit-content;
+    display: inline-block;
+    font-size: 2.2vh;
+    
+    padding: 5vh;
+}
+.aboutblock{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#animatedScroll2 {
+    padding: 20px;
+    background-color: white;
+    border-radius: 50px;
+    width: 90%;
+    height: fit-content;
+    opacity: 1;
+    animation-name: appear, fadeOut;
+    animation-timing-function: linear, linear;
+    animation-timeline: view(), view();
+    animation-range: entry 0% cover 45%, cover 80% cover 110%;
+    box-shadow: 2vh 2vh 5vh rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+   
+}
