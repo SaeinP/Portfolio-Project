@@ -321,11 +321,12 @@ a:hover{
     display: block;
     width: fit-content;
     
+    
 }
 
 .section__pic-container img{
     display: block;
-    width: 25vw;
+    width: clamp(30px, 25vw, 80vw);
     height: auto;
     
 } 
@@ -430,7 +431,7 @@ a:hover{
     width: 40vh;
     height: fit-content;
     display: inline-block;
-    
+    font-size: 2vh;
     
     
     padding: 5vh;

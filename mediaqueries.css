@@ -1,4 +1,10 @@
 @media screen and (max-width: 1200px){
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
     #desktop-nav{
         display: none;
     }
@@ -24,6 +30,12 @@
 
 /* Small-screen (phones, e.g. iPhone X) - stack profile image and text to avoid pushing content */
 @media screen and (max-width: 480px) {
+    html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
     #profile {
         display: flex;
         flex-direction: column;
@@ -64,5 +76,54 @@
     #animatedscroll{
         justify-content: center;
     }
+
+    /* About section: stack and avoid vh-based widths that overflow on narrow screens */
+    #containerAbout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding-right: 2rem; /* reduce large right padding used on desktop */
+        padding-left: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .aboutblock1,
+    .aboutblock2 {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        padding: 1.5rem; /* reduce padding on small screens */
+        box-sizing: border-box;
+    }
+
+    .aboutblock2 {
+        font-size: 1rem; /* reduce paragraph size slightly */
+    }
+
+    .section-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .section__pic-container.about-pic, .section__pic-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .section__pic-container img.about-pic,
+    .section__pic-container img {
+        width: clamp(100px, 35vw, 220px);
+        max-width: 70%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    
 }
 
