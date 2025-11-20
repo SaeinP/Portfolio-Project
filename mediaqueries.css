@@ -1,10 +1,5 @@
 @media screen and (max-width: 1200px){
-    html, body {
-         overflow-x: hidden;
-         margin: 0;
-         padding: 0;
-         width: 100vw;
-    }
+    
     #desktop-nav{
         display: none;
     }
@@ -33,12 +28,7 @@
 
 /* Small-screen (phones, e.g. iPhone X) - stack profile image and text to avoid pushing content */
 @media screen and (max-width: 480px) {
-    html, body {
-         overflow-x: hidden;
-         margin: 0;
-         padding: 0;
-         width: 100vw;
-    }
+    
     .cloud{
         display: none;
     }
