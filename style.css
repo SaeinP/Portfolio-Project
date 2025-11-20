@@ -76,7 +76,7 @@ head{
 
 body {
     font-family: "Nunito", sans-serif;
-    background: #ACEAFF;
+    background: linear-gradient(#ACEAFF,violet);
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -369,9 +369,11 @@ a:hover{
     
 }
  section img{
-    width: 5vh;
-    height: 5vh;
-    
+    width: 5vw;
+    height: auto;
+    max-width: 15vw;
+    max-height: 15vh;
+    object-fit: contain;
  }
 
 #socials-container{
@@ -442,8 +444,8 @@ a:hover{
     height: fit-content;
     display: inline-block;
     font-size: 2.2vh;
+    padding: 3vh;
     
-    padding: 5vh;
 }
 .aboutblock{
     display: block;
