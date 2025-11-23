@@ -15,6 +15,7 @@
         gap: 2rem;
         align-items: center;
         padding: 1.5rem;
+        flex-direction: column;
     }
 
     .section__pic-container{
@@ -23,6 +24,10 @@
 
     .section__text{
         flex: 2 1 auto;
+    }
+    #animatedscroll2{
+        justify-content: center;
+        flex-direction: row;
     }
 }
 
@@ -118,6 +123,10 @@
         max-width: 70%;
         height: auto;
         object-fit: cover;
+    }
+    #animatedscroll2{
+        justify-content: center;
+        flex-direction: column;
     }
 
     

@@ -327,7 +327,7 @@ a:hover{
 
 .section__pic-container img{
     display: block;
-    width: clamp(30px, 25vw, 80vw);
+    width: 50vw;
     height: auto;
     
 } 
@@ -389,8 +389,8 @@ a:hover{
  }
 
 #socials-container img{
-    width: 3.5vh;
-    height: 3.5vh;
+    width: 3.5vw;
+    height: auto;
     margin-inline: .1vh;
     transition: transform 0.3s ease;
     
@@ -423,7 +423,7 @@ a:hover{
     flex-flow: row;
     justify-content: space-between;
     
-    padding-right: 15vh;
+    padding-right: 5vh;
     width: 90%;
     align-items: center;
  }
@@ -431,20 +431,21 @@ a:hover{
 
 
 .aboutblock1{
-    width: 40vh;
+    width: fit-content;
     height: fit-content;
     display: inline-block;
-    font-size: 2vh;
+    font-size: 1.5vw;
     
     
-    padding: 5vh;
+    padding: 5vw;
+    padding-right: 1vw
 }
 .aboutblock2{
-    width: 100vh;
+    width: 25%;
     height: fit-content;
     display: inline-block;
-    font-size: 2.2vh;
-    padding: 3vh;
+    font-size: 2vw;
+    
     
 }
 .aboutblock{
@@ -469,4 +470,10 @@ a:hover{
     align-items: center;
     flex-flow: column;
     box-sizing: content-box;
+    
+}
+#text-container{
+    width: 40vw;
+
+    padding: 0;
 }
